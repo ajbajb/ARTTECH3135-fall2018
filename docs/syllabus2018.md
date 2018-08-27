@@ -172,12 +172,11 @@ ___
 - Review assignment 1.
 - Discuss readings.
 ##### Lesson 01 -- Anatomy of a Program & ofColor & Shapes
-    ###### Objective
-    - learn about the update() and draw() loop
-    - learn how to control color  
-    - learn how to control the flow of your program
-        - parts of an oF application
-            - setup(), update(), draw(), main().
+- learn about the update() and draw() loop
+- learn how to control color  
+- learn how to control the flow of your program
+    - parts of an oF application
+        - setup(), update(), draw(), main().
     - C++ --
         - flow control & iteration
             - `for(...)`, `if`, `else`, `else if`.
@@ -448,9 +447,3 @@ ___
 #### Session 13 -- Dec. 12 2018
 ##### Final Projects & Review
 ___
-
-#### References for me
- - [GRAV artists](https://en.wikipedia.org/wiki/Groupe_de_Recherche_d%E2%80%99Art_Visuel)
- - [AlgoClass 2012](https://github.com/edap/algo2012)
-
- - http://www.theoriz.com/
