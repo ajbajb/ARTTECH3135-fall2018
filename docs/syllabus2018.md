@@ -19,7 +19,7 @@ Class Forum
 :   [https://ats.community/c/courses/arttech-3135](https://ats.community/c/courses/arttech-3135)
 
 Class Website
-:   [http://saic-ats.github.io/ARTTECH-3135/](https://ajbajb.github.io/ARTTECH-3135/)
+:   [http://saic-ats.github.io/ARTTECH-3135/](https://ajbajb.github.io/ARTTECH3135-fall2018/)
 
 Code Examples
 :   [https://github.com/SAIC-ATS/ARTTECH-3135/](https://github.com/ajbajb/ARTTECH3135-fall2018/)
