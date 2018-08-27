@@ -19,10 +19,10 @@ Class Forum
 :   [https://ats.community/c/courses/arttech-3135](https://ats.community/c/courses/arttech-3135)
 
 Class Website
-:   [http://saic-ats.github.io/ARTTECH-3135/](https://ajbajb.github.io/ARTTECH3135-fall2018/)
+:   [https://ajbajb.github.io/ARTTECH3135-fall2018/](https://ajbajb.github.io/ARTTECH3135-fall2018/)
 
 Code Examples
-:   [https://github.com/SAIC-ATS/ARTTECH-3135/](https://github.com/ajbajb/ARTTECH3135-fall2018/)
+:   [https://github.com/ajbajb/ARTTECH3135-fall2018/](https://github.com/ajbajb/ARTTECH3135-fall2018/)
 
 ### Course Description
 This studio course investigates the creative possibilities in programming, from interactivity to information visualization. Students explore interactive narratives and games, software art, simulations and emergent behaviors, and other code-based forms. Lectures, discussions, and demonstrations provide a conceptual, aesthetic and technical foundation in programming as a creative practice.
