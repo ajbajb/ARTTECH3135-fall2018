@@ -132,7 +132,7 @@ ___
     - Creative Code Meet-up and TA hours!
 - ###### Lesson 00 -- Introduction to openFrameworks
     - Simple line drawings
-    ###### Objective
+    - The Objective
         - Create an oF project
         - learn x/y coordinate system
         - get acquainted with c++ syntax
