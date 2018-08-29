@@ -26,7 +26,24 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Collections
+collections:
+  assignments:
+    output: true
+    name: Assignments
 
+# Default Values
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author: bakercp
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: assignment
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
