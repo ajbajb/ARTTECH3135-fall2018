@@ -6,4 +6,4 @@ categories: welcome update
 ---
 Welcome!
 
-[Assignment 00](../blob/docs/_assignments/00a.md)
+[Assignment 00](../../../../../blob/docs/_assignments/00a.md)
