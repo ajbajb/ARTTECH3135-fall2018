@@ -20,6 +20,9 @@ Instructor
 Teaching Assistant
 :   Doug Rosman
 
+TA hours
+:   Tuesday 4pm-6pm in the Flexspace on the 4th floor.
+
 Class Forum
 :   [https://ats.community/c/courses/arttech-3135](https://ats.community/c/courses/arttech-3135)
 
