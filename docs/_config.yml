@@ -26,6 +26,15 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Collections
+collections:
+  assignments:
+    output: true
+    name: Assignments
+  notes:
+    output: true
+    name: Notes
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
