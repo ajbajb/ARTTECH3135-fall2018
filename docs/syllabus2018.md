@@ -1,3 +1,8 @@
+---
+layout: page
+title: Syllabus
+permalink: /syllabus/
+---
 ## Interactive Art / Creative Code, ARTTECH 3135
 
 Semester, Year
@@ -102,6 +107,7 @@ ___
                 - Python: [http://py.processing.org/](http://py.processing.org/)
         - [libCinder](https://libcinder.org/)
         - [openFrameworks](http://openFrameworks.cc)
+        - [OPENRNDR](https://openrndr.org/)
     - Hybrid
         - [Unity3d](https://unity3d.com/)
         - [Unreal Engine](https://www.unrealengine.com)
