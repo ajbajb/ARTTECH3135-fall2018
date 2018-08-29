@@ -6,4 +6,4 @@ categories: welcome update
 ---
 Welcome!
 
-[Assignment 00](../../../../../blob/master/docs/_assignments/00a.md)
+[Assignment 00](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/00a)
