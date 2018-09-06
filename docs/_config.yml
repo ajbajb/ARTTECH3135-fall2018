@@ -38,7 +38,7 @@ defaults:
   - scope:
       path: ""
     values:
-      author: bakercp
+      author: ajbajb
   - scope:
       path: ""
       type: assignments
