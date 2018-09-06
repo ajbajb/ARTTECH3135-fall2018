@@ -21,7 +21,7 @@ Teaching Assistant
 :   Doug Rosman
 
 TA hours
-:   Tuesday 4pm-6pm in the Flexspace on the 4th floor.
+:   Alternating Monday/Tuesday ~4:30pm - ~6:30pm in the Flexspace on the 4th floor. Full schedule on "TA Tutor Schedule" page on Canvas.
 
 Class Forum
 :   [https://ats.community/c/courses/arttech-3135](https://ats.community/c/courses/arttech-3135)
