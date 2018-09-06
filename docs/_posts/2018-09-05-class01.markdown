@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Welcome!"
+date:   2018-08-27 18:41:20 -0500
+categories: welcome update
+---
+Hi!
+[Code from class]()
+Only the src folder and the addons.make file have been posted. To run the examples select the folder of the example you would like to run (for example, the folder Day01_color0_background) in the Project Generator.  Generate the Xcode project and you should be good to go.
+
+
+To
+[Assignment 01](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/01a), __Due Sept 12, 2018__
