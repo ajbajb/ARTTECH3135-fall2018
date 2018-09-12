@@ -20,7 +20,7 @@ void ofApp::draw()
 	ofBackground(0);
 	
 	// try uncommenting the next line and see how it changes the program
-	//ofSeedRandom(time);
+	ofSeedRandom(ofGetMouseX());
 
 	// get a random number and assign it to xPos
 	int xPos = ofRandom(ofGetWidth());
