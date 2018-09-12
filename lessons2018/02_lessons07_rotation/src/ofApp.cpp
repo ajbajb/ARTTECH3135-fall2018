@@ -37,7 +37,7 @@ void ofApp::draw()
 		// Will "pop" of the co-ordinate system
 		ofPopMatrix();
 	}
-	
+
 	// if rotation hits 360, set it back to 0
 	if(rotation > 360)
 	{
