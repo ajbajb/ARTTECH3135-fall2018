@@ -12,7 +12,7 @@ Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/maste
 If you are updating your local class repository and you get a message telling you to "perhaps git stash":
 run:
 ```
-    git add
+    git add . 
 ```
 then
 ```
