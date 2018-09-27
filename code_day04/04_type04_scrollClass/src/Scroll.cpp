@@ -7,7 +7,7 @@ Scroll::Scroll()
 	//xPos = ofGetWidth();
 	yPos = ofRandom(ofGetHeight());
 	c = ofColor(0, 180, 90, 90);
-	
+
 	font.load("/Library/Fonts/Arial.ttf", 15);
 }
 
@@ -23,9 +23,9 @@ void Scroll::setup(string _sentence, float _x, float _y)
 void Scroll::update()
 {
 	xPos += speed * dir;
-	
+
 	ofRectangle boundingRect = font.getStringBoundingBox(displayStr, xPos, yPos);
-	
+
 	if (xPos <= -boundingRect.width)
 	{
 		xPos = ofGetWidth();
