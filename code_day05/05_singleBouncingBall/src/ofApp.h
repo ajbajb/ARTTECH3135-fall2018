@@ -9,9 +9,11 @@ class ofApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
+		void mousePressed(int x, int y, int button);
+		
+	std::vector<Ball> balls;
 	
-	Ball ball1;
-	Ball ball2;
+	const int NUM_BALLS = 5;
 	
 	
 
