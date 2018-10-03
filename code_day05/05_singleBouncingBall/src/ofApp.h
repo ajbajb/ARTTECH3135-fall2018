@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Ball.h"
 
 class ofApp : public ofBaseApp{
 
@@ -8,17 +9,10 @@ class ofApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
-
 	
-	float px;			 // position
-	float py;
-	int radius = 50;
+	Ball ball1;
+	Ball ball2;
 	
-	float topSpeed = 11;
-	float vx = topSpeed; // velocity
-	float vy = topSpeed;
-	float accel = -0.07; // acceleration
-	int dx = 1;			 // direction
-	int dy = 1;
+	
 
 };

@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-	const int numBalls = 100;
+	const int numBalls = 1000;
 	
 	b1.px = ofGetWidth()/2;
 	b1.py = ofGetHeight()/2;
