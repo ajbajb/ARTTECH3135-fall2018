@@ -9,12 +9,10 @@ Hello!
 
 Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day05)
 
-I added to files to the code repo, including code the demonstrates:
+I added some files to the code repo, including code that demonstrates:
     - objects that follow the mouse position
-    - 
+    - Don't worry, we will be looking at this example and others similar next week.
 
 and to this weeks Assignment - [Assignment 05](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/05a).
-
-Give yourself time to do this one!
 
 Thanks!
