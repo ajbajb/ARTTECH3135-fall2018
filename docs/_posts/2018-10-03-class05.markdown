@@ -7,13 +7,13 @@ categories: class
 
 Hello!
 
-Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day04)
+Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day05)
 
 I added to files to the code repo, including code the demonstrates:
     - objects that follow the mouse position
     - an animated face class
 
-and to this weeks Assignment - [Assignment 05](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/04a).
+and to this weeks Assignment - [Assignment 05](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/05a).
 
 Give yourself time to do this one!
 
