@@ -11,7 +11,7 @@ Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/maste
 
 I added to files to the code repo, including code the demonstrates:
     - objects that follow the mouse position
-    - an animated face class
+    - 
 
 and to this weeks Assignment - [Assignment 05](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/05a).
 
