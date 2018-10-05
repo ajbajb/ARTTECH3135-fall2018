@@ -35,5 +35,4 @@ public:
 	
 	// has a color
 	ofColor c;
-	
 };

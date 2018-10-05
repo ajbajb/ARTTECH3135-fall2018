@@ -21,8 +21,7 @@ Ball::Ball()
 	
 	radius = 20;
 	
-	c = ofColor::fromHsb(ofRandom(255), 255, 255);
-	
+	c = ofColor::fromHsb(ofRandom(255), 255, 255);	
 }
 
 Ball::~Ball()

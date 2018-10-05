@@ -10,7 +10,7 @@ Hello!
 Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day03)
 
 
-and to this weeks Assignment - [Assignment 02](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/03a)
+and to this weeks Assignment - [Assignment 03](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/03a)
 
 
 Thanks!

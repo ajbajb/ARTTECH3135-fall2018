@@ -13,7 +13,7 @@ class ofApp : public ofBaseApp{
 		
 	std::vector<Ball> balls;
 	
-	const int NUM_BALLS = 5;
+	const int NUM_BALLS = 1;
 	
 	
 
