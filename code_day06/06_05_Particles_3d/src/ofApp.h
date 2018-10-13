@@ -22,14 +22,14 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	
-	std::vector<Particle3D> particles;
-	std::vector<ofTexture> textures;
+        std::vector<Particle3D> particles;
+        std::vector<ofTexture> textures;
 	
-	glm::vec3 boundingBox;
-	glm::vec3 aForce;
-	float globalDrag = 0.1;
-	ofEasyCam cam;
+        glm::vec3 boundingBox;
+        glm::vec3 aForce;
+        float globalDrag = 0.1;
+        ofEasyCam cam;
 	
-	bool bDrawDebug = false;
+        bool bDrawDebug = false;
 		
 };

@@ -15,6 +15,7 @@ Particle3D::Particle3D()
 	topSpeed = 10;
 	
 	color = ofColor(255);
+    bDrawAxis = false;
 }
 
 void Particle3D::applyForce(glm::vec3 force)
@@ -58,10 +59,12 @@ void Particle3D::draw()
 	ofRotateZDeg(orientation.z);
 	
 	ofSetColor(color);
-	// texture.draw(0-size/2, 0-size/2, size, size);
+	tex.draw(0-size/2, 0-size/2, size, size);
 	
-	ofDrawBox(size);
-	ofDrawAxis(size);
+    if (bDrawAxis)
+    {
+        ofDrawAxis(size);
+    }
 	
 	ofPopMatrix();
 }

@@ -20,6 +20,17 @@ public:
 	float radius;
 	float mass;
 	float topSpeed;
-	
 	ofColor color;
+	
+	ofTexture tex;
 };
+
+
+
+
+
+
+
+
+
+

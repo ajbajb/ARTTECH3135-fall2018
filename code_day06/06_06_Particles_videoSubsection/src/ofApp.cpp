@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-	grabber.setDeviceID(1);
+	grabber.setDeviceID(0);
 	grabber.setup(640, 480);
 	
 	int rows = 64;

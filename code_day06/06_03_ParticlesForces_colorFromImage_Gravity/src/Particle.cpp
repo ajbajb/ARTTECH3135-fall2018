@@ -31,6 +31,7 @@ void Particle::checkWalls()
 	// check right
 	if (position.x + radius > ofGetWidth())
 	{
+        acceleration.y *= -1;
 		velocity.x *= -1;
 		position.x = ofGetWidth() - radius;
 	}
@@ -38,6 +39,7 @@ void Particle::checkWalls()
 	// check left
 	if (position.x - radius < 0)
 	{
+        acceleration.y *= -1;
 		velocity.x *= -1;
 		position.x = 0 + radius;
 	}
@@ -63,5 +65,7 @@ void Particle::draw()
 {
 	ofSetColor(color);
 	ofDrawCircle(position, radius);
+	
+	// instead of drawing a circle we are drawing a texture
 	// tex.draw(position.x, position.y, radius, radius);
 }

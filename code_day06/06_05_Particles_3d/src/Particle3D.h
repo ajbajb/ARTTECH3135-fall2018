@@ -25,7 +25,9 @@ public:
 	float mass;
 	float topSpeed;
 	
-	ofTexture texture;
+	ofTexture tex;
 	ofColor color;
+    
+    bool bDrawAxis;
 	
 };

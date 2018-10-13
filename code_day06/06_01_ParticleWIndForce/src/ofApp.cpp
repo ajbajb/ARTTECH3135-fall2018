@@ -3,8 +3,19 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-	p.position = glm::vec3(200, 0, 0);
-	p.acceleration = glm::vec3(0.0, 0.0, 0);	
+    // make few or mke many
+    int NUM_PARTICLES = 200;
+    
+	for (int i = 0; i < NUM_PARTICLES; i++)
+	{
+		Particle tempP;
+		tempP.position = glm::vec3(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()), 0);
+		tempP.acceleration = glm::vec3(ofRandom(0.2), ofRandom(0.2), 0);
+		tempP.color = ofColor(ofRandom(255), ofRandom(255), ofRandom(255), 137);
+		tempP.radius = ofRandom(3, 25);
+		
+		particles.push_back(tempP);
+	}
 }
 
 //--------------------------------------------------------------
@@ -13,20 +24,59 @@ void ofApp::update()
 	glm::vec3 persistForce(0.05, 0.03, 0);
 	glm::vec3 windForce(0, 0, 0);
 	
-	if (ofGetMousePressed())
+	//range for loop to interate over all our elements in particles
+	for (auto &p : particles)
 	{
-		bWind = true;
-		windForce = glm::vec3(-0.45, -0.09, 0);
-		p.applyForce(windForce);
+        // the wind only "blows" when we press the mouse
+        // and only applied then also
+		if (ofGetMousePressed())
+		{
+			bWind = true;
+			
+			windForce = glm::vec3(-0.55, -0.65, 0);
+			
+			p.applyForce(windForce);
+		}
+	
+		p.applyForce(persistForce);
+		
+		// check right
+		if (p.position.x + p.radius > ofGetWidth())
+		{
+            p.acceleration.x *= -1;
+			p.velocity.x *= -1;
+			p.position.x = ofGetWidth() - p.radius;
+		}
+		
+		// check left
+		if (p.position.x - p.radius < 0)
+		{
+            p.acceleration.x *= -1;
+			p.velocity.x *= -1;
+			p.position.x = 0 + p.radius;
+		}
+		
+		// check top
+		if (p.position.y - p.radius < 0)
+		{
+			p.acceleration.y *= -1;
+			p.velocity.y *= -1;
+			p.position.y = 0 + p.radius;
+		}
+		
+		// check bottom
+		if (p.position.y + p.radius > ofGetHeight())
+		{
+			p.acceleration.y *= -1;
+			p.velocity.y *= -1;
+			p.position.y = ofGetHeight() - p.radius;
+		}
+		
+		p.update();
+	
+//		ofLog() << "accel= " << p.acceleration;
+//		ofLog() << "velo= " << p.velocity;
 	}
-	
-	p.applyForce(persistForce);
-	
-	checkWalls(p);
-	p.update();
-	
-	ofLog() << "accel= " << p.acceleration;
-	ofLog() << "velo= " << p.velocity;
 }
 
 //--------------------------------------------------------------
@@ -34,7 +84,18 @@ void ofApp::draw()
 {
 	ofBackground(40);
 	
-	p.draw();
+	// with range for loop
+	// you create a varible called p
+	for (auto &p : particles)
+	{
+		p.draw();
+	}
+	
+	// "normal" for-loop
+//    for( int i= 0; i < particles.size(); i++)
+//    {
+//        particles[i].draw;
+//    }
 	
 	if(bWind)
 	{
@@ -48,38 +109,6 @@ void ofApp::draw()
 	bWind = false;
 }
 
-void ofApp::checkWalls(Particle &pref)
-{
-	// check right
-	if (pref.position.x + pref.radius > ofGetWidth())
-	{
-		pref.velocity.x *= -1;
-		pref.position.x = ofGetWidth() - pref.radius;
-	}
-	
-	// check left
-	if (pref.position.x - pref.radius < 0)
-	{
-		pref.velocity.x *= -1;
-		pref.position.x = 0 + pref.radius;
-	}
-	
-	// check top
-	if (pref.position.y - pref.radius < 0)
-	{
-		pref.acceleration.y *= -1;
-		pref.velocity.y *= -1;
-		pref.position.y = 0 + pref.radius;
-	}
-	
-	// check bottom
-	if (pref.position.y + pref.radius > ofGetHeight())
-	{
-		pref.acceleration.y *= -1;
-		pref.velocity.y *= -1;
-		pref.position.y = ofGetHeight() - pref.radius;
-	}
-}
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){

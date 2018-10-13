@@ -8,12 +8,13 @@ Particle::Particle()
 	
 	radius = 10;
 	mass = radius * 0.5;
-	topSpeed = 40;
+	topSpeed = 50;
 	color = ofColor(0, 200, 100);
 }
+
 void Particle::applyForce(glm::vec3 force)
 {
-	acceleration += force / mass;  // here, radius * 0 .5 is the objects mass
+	acceleration += (force / mass);  // here, radius * 0 .5 is the objects mass
 }
 
 void Particle::update()
@@ -30,6 +31,7 @@ void Particle::checkWalls()
 	// check right
 	if (position.x + radius > ofGetWidth())
 	{
+        acceleration.y *= -1;
 		velocity.x *= -1;
 		position.x = ofGetWidth() - radius;
 	}
@@ -37,6 +39,7 @@ void Particle::checkWalls()
 	// check left
 	if (position.x - radius < 0)
 	{
+        acceleration.y *= -1;
 		velocity.x *= -1;
 		position.x = 0 + radius;
 	}
@@ -56,26 +59,13 @@ void Particle::checkWalls()
 		velocity.y *= -1;
 		position.y = ofGetHeight() - radius;
 	}
-	
-	if (position.z < -500)
-	{
-		acceleration.z *= -1;
-		velocity.z *= -1;
-		
-		position.z = -500;
-	}
-	
-	if (position.z > 500)
-	{
-		acceleration.z *= -1;
-		velocity.z *= -1;
-		
-		position.z = 500;
-	}
 }
 
 void Particle::draw()
 {
 	ofSetColor(color);
-	ofDrawCircle(position, radius);
+	// ofDrawCircle(position, radius);
+	
+	// instead of drawing a circle we are drawing a texture
+	tex.draw(position.x, position.y, radius, radius);
 }

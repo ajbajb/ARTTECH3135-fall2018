@@ -23,6 +23,20 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	
 		glm::vec3 computeGravity(Particle& part, glm::vec3& attractor);
+	
 		std::vector<Particle> particles;
-		
+		ofImage image;
+	
+		int forceDirection = 1;
 };
+
+
+
+
+
+
+
+
+
+
+

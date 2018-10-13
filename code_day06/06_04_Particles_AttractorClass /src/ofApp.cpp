@@ -11,10 +11,6 @@ void ofApp::setup()
 	// width, height, depth of bounding cube
 	boundingSize = {1000, 1000, 1000};
 	
-//	Attractor aa;
-//	aa.position = {0, 0, 0};
-//	attractors.push_back(aa);
-	
 	for (int i = 0; i < 10; i++)
 	{
 		Attractor a;
@@ -70,7 +66,7 @@ glm::vec3 ofApp::computeGravity(Particle &part, Attractor &attractor)
 	
 	// get the distance from attractor to particle
 	float distance = glm::distance(attractor.position, part.position);
-	distance = ofClamp(distance, 7, 500);
+	distance = ofClamp(distance, 4, 500);
 
 	// compute the magnitude of the force using the mass of the particle and gravity constant
 	float magnitude = (gravityConst * part.mass * attractor.mass) / (distance * distance);
@@ -85,10 +81,8 @@ glm::vec3 ofApp::computeGravity(Particle &part, Attractor &attractor)
 void ofApp::draw()
 {
 	ofBackground(20);
-	// ofEnableBlendMode(OF_BLENDMODE_ADD);
 	
 	cam.begin();
-	
 	if (bDrawAttractors)
 	{
 		for (auto &a: attractors)
@@ -106,7 +100,7 @@ void ofApp::draw()
 	{
 		ofDrawAxis(boundingSize.x/2);
 		ofPushStyle();
-		ofSetColor(255, 50, 50, 25);
+		ofSetColor(255, 50, 50, 10);
 		ofDrawBox(boundingSize.x, boundingSize.y, boundingSize.z);
 		ofPopStyle();
 	}
@@ -119,6 +113,11 @@ void ofApp::draw()
 		string parts = "Particles::" + ofToString(particles.size());
 		ofDrawBitmapString(frameStr, 20, ofGetHeight() - 40);
 		ofDrawBitmapString(parts, 20, ofGetHeight() - 20);
+    
+        string infoStr = "'x' to see axis and bounding box. 'd' to toggle drawing attraction points";
+        string camInfo = "Click and drag to move the view around. Two finger drag to zoom in/out";
+        ofDrawBitmapString(infoStr, 20, 20);
+        ofDrawBitmapString(camInfo, 20, 40);
 	ofPopStyle();
 }
 

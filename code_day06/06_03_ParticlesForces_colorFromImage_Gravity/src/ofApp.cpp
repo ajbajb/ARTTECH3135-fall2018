@@ -7,16 +7,23 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+	image.load("Fairytale.jpg");
 	
-	for (int i = 0; i < 30; i++)
+	for( int y = 0; y < image.getHeight(); y += 6)
 	{
-		Particle p;
-		p.position = glm::vec3(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()), 0);
-		p.velocity = glm::vec3(0.01, 0.01, 0);
-		p.radius = ofRandom(50, 100);
-		
-		p.color = ofColor(255);
-		particles.push_back(p);
+		for( int x = 0; x < image.getWidth(); x += 6)
+		{
+			ofColor pixelColor;
+			pixelColor = image.getColor(x, y);
+			
+			Particle p;
+			p.position = glm::vec3(x, y, 0);
+			p.velocity = glm::vec3(0.001, 0, 0);
+			p.radius = ofRandom(2, 6);
+			p.color = ofColor(pixelColor, 50);
+			
+			particles.push_back(p);
+		}
 	}
 }
 
@@ -27,24 +34,41 @@ void ofApp::update()
 	
 	for (auto &p : particles)
 	{
-		float dragCo = 0.01;
+		// a drag force=============================================
+		float dragCo = 0.04;
 		glm::vec3 dragMagnitude = (p.velocity * p.velocity) * dragCo;
 		glm::vec3 dragDirection = glm::normalize(p.velocity) * -1;
-		
 		glm::vec3 drag = dragMagnitude * dragDirection;
+		// ==========================================================
 		
-		glm::vec3 gravityForce = computeGravity(p, mousePos);
+		
+		//===our own "not so great" gravity========================
+		glm::vec3 gravityForce;
+		
+		float distance = glm::distance(mousePos, p.position);
+		glm::vec3 directionVec = mousePos - p.position;
+		glm::vec3 direction = glm::normalize(directionVec);
+		
+		float magnitude = distance * 0.02;
+		gravityForce = magnitude * direction * forceDirection;
+		// ===================================================
+		
+		glm::vec3 awesomeGravityForce;
+		
+		awesomeGravityForce = computeGravity(p, mousePos) * forceDirection;
 		
 		if (ofGetMousePressed())
 		{
-			p.applyForce(gravityForce);
+			p.applyForce(awesomeGravityForce);
 		}
 		
 		p.applyForce(drag); //apply drag every frame
 		p.update();
 	}
 }
+//=====end-of=update=========
 
+//==our gravity function==============================================
 glm::vec3 ofApp::computeGravity(Particle &part, glm::vec3 &attractor)
 {
 	float gravityConst = 10;
@@ -69,16 +93,70 @@ glm::vec3 ofApp::computeGravity(Particle &part, glm::vec3 &attractor)
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-	ofBackground(20);
+	ofEnableBlendMode(OF_BLENDMODE_ADD);
+	ofBackground(0);
 	
+	// loop through all our particels YAYAYAYAYAYA
+	
+	//range for loop!!!!!
 	for (auto &p : particles)
 	{
 		p.draw();
 	}
+	
+	ofPushStyle();
+	ofSetColor(255);
+	
+	string frameString = "FrameRate= " + ofToString(ofGetFrameRate());
+	ofDrawBitmapString(frameString, 20, 20);
+	
+	string particleString = "Particle Number= " + ofToString(particles.size());
+	ofDrawBitmapString(particleString, 20, 40);
+    
+    string infoStr = "Press 'q' for gravity. 'w' for repulsion. Space to start over";
+    ofDrawBitmapString(infoStr, 20, ofGetHeight() - 20);
+    
+	ofPopStyle();
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void ofApp::keyPressed(int key)
+{
+	if (key == 'q')
+	{
+		forceDirection = 1;
+	}
+	
+	if (key == 'w')
+	{
+		forceDirection = -1;
+	}
+	
+    if (key == ' ')
+    {
+        // clear all particles!
+        particles.clear();
+        
+        // make "new" ones at start locations
+        for( int y = 0; y < image.getHeight(); y += 6)
+        {
+            for( int x = 0; x < image.getWidth(); x += 6)
+            {
+                ofColor pixelColor;
+                pixelColor = image.getColor(x, y);
+            
+                Particle p;
+                p.position = glm::vec3(x, y, 0);
+                p.velocity = glm::vec3(0.001, 0, 0);
+                p.radius = ofRandom(2, 6);
+                p.color = ofColor(pixelColor, 50);
+            
+                particles.push_back(p);
+            }
+        }
+    
+        ofLog() << particles.size();
+    }
 
 }
 

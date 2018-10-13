@@ -22,10 +22,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	
-		void checkWalls(Particle &pref);
 	
-		Particle p;
+		std::vector<Particle> particles;
 	
 		bool bWind = false;
-		
 };

@@ -22,8 +22,21 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	
-	glm::vec3 computeGravity(Particle &part, glm::vec3 attractor);
+		glm::vec3 computeGravity(Particle& part, glm::vec3& attractor);
 	
-	std::vector<Particle> particles;
-	ofImage img;
+		std::vector<Particle> particles;
+		ofImage image;
+	
+		int forceDirection = 1;
 };
+
+
+
+
+
+
+
+
+
+
+

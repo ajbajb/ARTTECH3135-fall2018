@@ -13,7 +13,8 @@ Particle::Particle()
 
 void Particle::applyForce(glm::vec3 force)
 {
-	acceleration += force;
+	// add force to acceleration
+	acceleration += force / (radius * 0.5);
 }
 
 void Particle::update()
@@ -22,7 +23,7 @@ void Particle::update()
 	velocity = glm::clamp(velocity, -topSpeed, topSpeed);
 	position += velocity;
 	
-	acceleration = {0, 0, 0};
+	acceleration = {0, 0, 0};  // make sure to clear acceleration!
 }
 
 void Particle::draw()
