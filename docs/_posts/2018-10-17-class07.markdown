@@ -14,7 +14,7 @@ and to this weeks Assignment - [Assignment 07](https://ajbajb.github.io/ARTTECH3
 A very helpful github cheat sheet is [here]()  (or will be very shortly, I am working on it currently!).
 
 Please post your completed assignments in your github repo and send me the url to your repo through slack.
-Each assignment should be in its own folder and each folder should be named something descriptive, for example "assignment01_digitalPortrait" (it doesnt need to be _exactly_ this, I need to know it is for assignment 01). Inside this folder should be all the necessary files.
+Each assignment should be in its own folder and each folder should be named something descriptive, for example "assignment01\_digitalPortrait" (it doesnt need to be _exactly_ this, I need to know it is for assignment 01). Inside this folder should be all the necessary files.
 If your repo is named "interactive_code", your file structure should look like this:
 
 ```
