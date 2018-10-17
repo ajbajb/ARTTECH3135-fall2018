@@ -4,47 +4,20 @@
 void ofApp::setup()
 {
     grabber.setup(640, 480);
-    gw = grabber.getWidth();
-    gh = grabber.getHeight();
+    grabberPix.allocate(grabber.getWidth(), grabber.getHeight(), OF_PIXELS_RGB);
     
-    grabberPix.allocate(gw, gh, OF_PIXELS_RGB);
-    texture.allocate(gw, gh, GL_RGB);
-
+    ofLoadImage(fredTex, "freddy.png");
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
-    float threshold = 150;
     grabber.update();
     
     if (grabber.isFrameNew())
     {
         grabberPix = grabber.getPixels();
-        
-        for (int x = 0; x < gw; x++)
-        {
-            for (int y= 0; y < gh; y++)
-            {
-                // get the brightness of our pixel
-                ofColor pixelColor = grabberPix.getColor(x, y);
-                float brightness = pixelColor.getBrightness();
-                
-                // if it is above our threshold
-                if (brightness > threshold)
-                {
-                    // draw it white
-                   grabberPix.setColor(x, y, ofColor(255));
-                }
-                else // if it is below our threshold
-                {
-                    // do something else... like draw the pixel black
-                    grabberPix.setColor(x, y, ofColor(0));
-                }
-            }
-        }
     }
-    texture.loadData(grabberPix);
 }
 
 //--------------------------------------------------------------
@@ -52,7 +25,32 @@ void ofApp::draw()
 {
     ofBackground(0);
     
-    texture.draw(0, 0);
+    for (int x = 0; x< grabberPix.getWidth(); x += 20)
+    {
+        for (int y = 0; y < grabberPix.getHeight(); y += 20)
+        {
+            ofColor pixelColor = grabberPix.getColor(x, y);
+            float brightness = pixelColor.getBrightness();
+            
+            float freddySize = ofMap(brightness, 0, 255, 0, 100);
+            
+            ofSetColor(pixelColor);
+            
+            ofPushMatrix();
+            ofTranslate(x, y);
+            ofRotateZDeg(d);
+            fredTex.draw(0, 0, freddySize, freddySize);
+            
+            ofPopMatrix();
+        }
+    }
+    
+    d += 0.4 * rotationDirection;
+    if (d > 10 or d < -10 )
+    {
+        
+        rotationDirection *= -1;
+    }
 }
 
 //--------------------------------------------------------------
