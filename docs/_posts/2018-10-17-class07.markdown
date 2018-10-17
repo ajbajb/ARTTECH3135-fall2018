@@ -11,7 +11,7 @@ Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/maste
 
 and to this weeks Assignment - [Assignment 07](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/07a).
 
-A very helpful github cheat sheet is [here]()  (or will be very shortly, I am working on it currently!).
+A very helpful github cheat sheet is [here](https://ajbajb.github.io/ARTTECH3135-fall2018/github-cheatsheet/)  (or will be very shortly, I am working on it currently!).
 
 Please post your completed assignments in your github repo and send me the url to your repo through slack.
 Each assignment should be in its own folder and each folder should be named something descriptive, for example "assignment01\_digitalPortrait" (it doesnt need to be _exactly_ this, I need to know it is for assignment 01). Inside this folder should be all the necessary files.
