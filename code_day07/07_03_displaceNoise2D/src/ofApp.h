@@ -20,11 +20,11 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    
-        ofVideoGrabber grabber;
-    
+		
+    ofVideoGrabber grabber;
     ofPixels grabberPix;
     ofTexture texture;
     
-		
+    int gWidth;
+    int gHeight;
 };

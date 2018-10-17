@@ -22,9 +22,21 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
         ofVideoGrabber grabber;
+        ofPixels grabberPix;
     
-    ofPixels grabberPix;
-    ofTexture texture;
-    
+        ofTexture texture;
 		
 };
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,10 +4,6 @@
 void ofApp::setup()
 {
     grabber.setup(640, 480);
-    
-    grabberPix.allocate(grabber.getWidth(), grabber.getHeight(), OF_PIXELS_RGB);
-    texture.allocate(grabber.getWidth(), grabber.getHeight(), GL_RGB);
-    
 }
 
 //--------------------------------------------------------------
@@ -15,33 +11,37 @@ void ofApp::update()
 {
     grabber.update();
     
-    // do you have a new fresh frame
-    if (grabber.isFrameNew()) //yes?
+    if (grabber.isFrameNew())
     {
-        //get the pixels from the camera
         grabberPix = grabber.getPixels();
-        for (int x = 0; x < grabberPix.getWidth(); x++)
-        {
-            for (int y = 0; y < grabberPix.getHeight(); y++)
-            {
-                // and now we can do something!
-                
-                
-
-            }
-        }
         
     }
-    
-    texture.loadData(grabberPix);
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-    ofBackground(0);
-    //grabber.draw(0, 0);
-    texture.draw(0, 0);
+    ofBackgroundGradient(ofColor::darkGrey, ofColor::black);
+    
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2 - grabber.getWidth()/2, ofGetHeight()/2 - grabber.getHeight()/2);
+    // grabber.draw(0, 0);
+    
+    for (int x = 0; x < grabberPix.getWidth(); x+=10)
+    {
+        for (int y = 0; y < grabberPix.getHeight(); y+=10)
+        {
+            ofColor pixColor = grabberPix.getColor(x, y);
+            float brightness = pixColor.getBrightness();
+            float size = ofMap(brightness, 0., 255., 2., 25., true);
+            
+            ofSetColor(pixColor);
+            ofFill();
+            ofDrawCircle(x, y, size);
+        }
+    }
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------

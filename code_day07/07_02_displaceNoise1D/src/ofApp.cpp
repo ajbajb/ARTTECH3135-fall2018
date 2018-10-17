@@ -7,41 +7,51 @@ void ofApp::setup()
     
     grabberPix.allocate(grabber.getWidth(), grabber.getHeight(), OF_PIXELS_RGB);
     texture.allocate(grabber.getWidth(), grabber.getHeight(), GL_RGB);
-    
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
+    float noiseScale = 0.003;
     grabber.update();
     
-    // do you have a new fresh frame
-    if (grabber.isFrameNew()) //yes?
+    if (grabber.isFrameNew())
     {
-        //get the pixels from the camera
         grabberPix = grabber.getPixels();
+        
         for (int x = 0; x < grabberPix.getWidth(); x++)
         {
             for (int y = 0; y < grabberPix.getHeight(); y++)
             {
-                // and now we can do something!
+                // noise(0-1) = noise( (noiseSpace + offset) * scalestep)
+                float noise = ofNoise((x + ofGetMouseX()) * noiseScale);
+                float xDisplaced = x + (ofGetWidth() * noise);
                 
+                xDisplaced = ofWrap(xDisplaced, 0, grabberPix.getWidth());
+                ofColor displacedColor = grabberPix.getColor(xDisplaced, y);
                 
-
+                grabberPix.setColor(x, y, displacedColor);
             }
         }
-        
     }
     
     texture.loadData(grabberPix);
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
     ofBackground(0);
-    //grabber.draw(0, 0);
+    
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2 + texture.getWidth()/2, ofGetHeight()/2 - texture.getHeight()/2);
+    ofScale( -1, 1, 1);
+    
     texture.draw(0, 0);
+    
+    ofPopMatrix();
+
 }
 
 //--------------------------------------------------------------

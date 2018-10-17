@@ -21,10 +21,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-        ofVideoGrabber grabber;
-    
-    ofPixels grabberPix;
+    ofVideoGrabber grabber;
+    ofPixels pix;
     ofTexture texture;
     
+    int gw;
+    int gh;
 		
 };

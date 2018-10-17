@@ -5,9 +5,13 @@ void ofApp::setup()
 {
     grabber.setup(640, 480);
     
-    grabberPix.allocate(grabber.getWidth(), grabber.getHeight(), OF_PIXELS_RGB);
-    texture.allocate(grabber.getWidth(), grabber.getHeight(), GL_RGB);
+    gw = grabber.getWidth();
+    gh = grabber.getHeight();
     
+    pix.allocate(gw, gh, OF_PIXELS_RGB);
+    texture.allocate(gw, gh, GL_RGB);
+    
+    pix.set(0);
 }
 
 //--------------------------------------------------------------
@@ -15,33 +19,39 @@ void ofApp::update()
 {
     grabber.update();
     
-    // do you have a new fresh frame
-    if (grabber.isFrameNew()) //yes?
+    if (grabber.isFrameNew())
     {
-        //get the pixels from the camera
-        grabberPix = grabber.getPixels();
-        for (int x = 0; x < grabberPix.getWidth(); x++)
+        for (int x = 0; x < gw; x++)
         {
-            for (int y = 0; y < grabberPix.getHeight(); y++)
+            for (int y = 0; y < gh; y++)
             {
-                // and now we can do something!
+                if (x <= gw-1 )
+                {
+                    ofColor prevColor = pix.getColor(x+1, y);
+                    ofColor currentColor = grabber.getPixels().getColor(x, y);
                 
+                    ofColor lerpedColor = prevColor.getLerped(currentColor, 0.001);
+                    pix.setColor(x, y, lerpedColor);
+                }
+                else
+                {
+                    ofColor grabberColor = grabber.getPixels().getColor(x, y);
+                    pix.setColor(x,y, grabberColor);
+                }
                 
-
             }
         }
-        
     }
     
-    texture.loadData(grabberPix);
+    texture.loadData(pix);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
     ofBackground(0);
-    //grabber.draw(0, 0);
     texture.draw(0, 0);
+
 }
 
 //--------------------------------------------------------------

@@ -5,32 +5,45 @@ void ofApp::setup()
 {
     grabber.setup(640, 480);
     
-    grabberPix.allocate(grabber.getWidth(), grabber.getHeight(), OF_PIXELS_RGB);
-    texture.allocate(grabber.getWidth(), grabber.getHeight(), GL_RGB);
+    gWidth = grabber.getWidth();
+    gHeight = grabber.getHeight();
     
+    grabberPix.allocate(gWidth, gHeight, OF_PIXELS_RGB);
+    texture.allocate(gWidth, gHeight, GL_RGB);
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
+    float noiseScale = 0.001;
     grabber.update();
     
-    // do you have a new fresh frame
-    if (grabber.isFrameNew()) //yes?
+    if (grabber.isFrameNew())
     {
-        //get the pixels from the camera
+        // get a fresh set of pixels to play with
         grabberPix = grabber.getPixels();
-        for (int x = 0; x < grabberPix.getWidth(); x++)
+        
+        for (int x = 0; x < gWidth; x++)
         {
-            for (int y = 0; y < grabberPix.getHeight(); y++)
+            for (int y = 0; y < gHeight; y++)
             {
-                // and now we can do something!
+                // do something
+                // 2d Noise
+                float noise = ofNoise((x + ofGetMouseX()) * noiseScale, (y + ofGetMouseY()) * noiseScale);
                 
+                int displacedX = x + gWidth * noise;
+                int displacedY = y + gHeight * noise;
                 
-
+                displacedX = ofWrap(displacedX, 0, gWidth);
+                displacedY = ofWrap(displacedY, 0, gHeight);
+                
+                // grab the color at the displaced location from the fresh pixels
+                ofColor displacedColor = grabber.getPixels().getColor(displacedX, displacedY);
+                
+                grabberPix.setColor(x, y, displacedColor);
             }
         }
-        
     }
     
     texture.loadData(grabberPix);
@@ -40,8 +53,14 @@ void ofApp::update()
 void ofApp::draw()
 {
     ofBackground(0);
-    //grabber.draw(0, 0);
+    
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2 + gWidth/2, ofGetHeight()/2 - gHeight/2);
+    ofScale(-1, 1, 1);
+    
     texture.draw(0, 0);
+    
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------
