@@ -11,7 +11,7 @@ ___
 
 First Step: Create a repository on GitHub. Make sure to initialize it with a readme.
 
-After the repository has been created, you need to clone it on to your local computer.
+After the repository has been created, you need to clone it on to your local computer.  We will refer to the repository created on Github and that lives on Github's servers at the _remote_ repository. The _local_ repository is what lives on your computer. We will make changes to the local repository and push these changes to the remote.  You will be able to share with your friends and colleagues what is posted on the remote repository through the miracle of the _World Wide Web_. They will be impressed.
 
 I will discuss two options for for posting to and updating your GitHub repo.
 1. Using the GitHub desktop client.
@@ -19,12 +19,15 @@ I will discuss two options for for posting to and updating your GitHub repo.
 
 With both options we will be executing the following steps:
 1. Clone: cloning the remote repository to your local hard drive.
-2. Add: adding changes.
+2. Stage: adding changes.
 3. Commit: committing to the changes.
 4. Push: pushing your changes to the remote repository.
 ___
+
 Desktop Client way
 ___
+
+
 Terminal way
 ___
 You will need to know some basic Terminal commands in order to update your remote repository through Terminal.  The most helpful ones will be::
@@ -78,7 +81,7 @@ Open your Terminal app. `cd` to the directory in which you would like to put you
 and execute.
 
 The cloned folder now represents a git folder that is your _local_ repository. Get the url for the repository by clicking on the green 'Clone or download' button then click on the clip board button inside of the drop down.
-![super](https://github.com/ajbajb/ARTTECH3135-fall2018/blob/master/docs/_assets/gitClone.png)
+![super](../blob/master/docs/_assets/gitClone.png)
 
 Add the files you want to this git folder.
 
