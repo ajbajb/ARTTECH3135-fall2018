@@ -81,7 +81,7 @@ Open your Terminal app. `cd` to the directory in which you would like to put you
 and execute.
 
 The cloned folder now represents a git folder that is your _local_ repository. Get the url for the repository by clicking on the green 'Clone or download' button then click on the clip board button inside of the drop down.
-![super](../blob/master/docs/_assets/gitClone.png)
+![super](../../blob/master/docs/_assets/gitClone.png)
 
 Add the files you want to this git folder.
 
