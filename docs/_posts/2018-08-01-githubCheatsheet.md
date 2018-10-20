@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "using gitHub"
-date:   2018-10-12 20:43:20 -0500
+date:   2018-08-01 20:43:20 -0500
 categories: class
 ---
 
@@ -77,8 +77,8 @@ Open your Terminal app. `cd` to the directory in which you would like to put you
 <pre><code>cd git clone <em>http-address-of-the-git-repo</em></code></pre>
 and execute.
 
-The cloned folder now represents a git folder that is your _local_ repository. Get the url for the repository by clicking on the green 'Clone or download' button then click on the clip board button inside of the drop down. 
-![super](../blob/assets/gitClone.png)
+The cloned folder now represents a git folder that is your _local_ repository. Get the url for the repository by clicking on the green 'Clone or download' button then click on the clip board button inside of the drop down.
+![super](../blob/master/docs/_assets/gitClone.png)
 
 Add the files you want to this git folder.
 
