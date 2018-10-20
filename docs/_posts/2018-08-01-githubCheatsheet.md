@@ -18,17 +18,20 @@ I will discuss two options for for posting to and updating your GitHub repo.
 2. Using Terminal.
 
 With both options we will be executing the following steps:
-1. Clone: cloning the remote repository to your local hard drive.
-2. Stage: adding changes.
-3. Commit: committing to the changes.
+1. Clone:, cloning the remote repository to your local hard drive.
+2. Stage ie. adding changes.
+3. Commit: committing the changes.
 4. Push: pushing your changes to the remote repository.
 ___
 
-Desktop Client way
+using the Desktop Client
 ___
 
+__further reading__
 
-Terminal way
+[Desktop guides](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
+
+Using Terminal
 ___
 You will need to know some basic Terminal commands in order to update your remote repository through Terminal.  The most helpful ones will be::
 ```
@@ -55,39 +58,23 @@ Navigating in Terminal is a matter of `pwd`ing to see where you currently are, `
 
 You can also (and this you will most likely use), drag and drop a folder after typing `cd` to move directly to that directory.  Make sure you hit the spacebar after typing `cd` and before dropping the folder in.
 
-Now we are ready to use git in the command line.
-The steps we will take:
-1. cloning your remote gut repository (clone).
-2. making changes to this repository locally.
-3. staging the changes (add).
-4. committing those changes (commit).
-5. pushing  those changes to the remote repository (push).
-and the corresponding git commands to execute those steps:
-
-```
-1. git clone
-3. git add
-4. git commit -m
-5. git push
-```
-
-Step 2 is really a matter of adding files or folders to the local git folder and/or changing files already apart of the local git folder. Super.
-
 __Cloning__
 
-Open your Terminal app. `cd` to the directory in which you would like to put your git repository. Once there, type:
+Open your Terminal app. `cd` to the directory in which you would like to put your git repository. To get the url for the remote repository click on the green 'Clone or download' button, then click on the clip board button inside of the drop down.
+![super](../../../../blob/master/docs/_assets/gitClone.png)
 
-<pre><code>cd git clone <em>http-address-of-the-git-repo</em></code></pre>
+Once there, type:
+
+<pre><code>git clone <em>http-address-of-the-git-repo</em></code></pre>
 and execute.
 
-The cloned folder now represents a git folder that is your _local_ repository. Get the url for the repository by clicking on the green 'Clone or download' button then click on the clip board button inside of the drop down.
-![super](../../blob/master/docs/_assets/gitClone.png)
+You now have a folder in that directory that is your copy of that repository.
 
-Add the files you want to this git folder.
+
 
 __Staging__
 
-Once you are done making changes to the repository. You _stage_ your changes.
+Once you are done making changes to the repository you _stage_ your changes.
 
 `cd` into the repository folder.
 You can stage all changes at once with:
@@ -149,3 +136,11 @@ git push
 ```
 
 All the changes will be made visible on GitHub.
+
+__further reading__
+
+More gitHub resources
+
+[GutHub Hello World](https://guides.github.com/activities/hello-world/)
+
+[GitHub cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
