@@ -5,7 +5,7 @@ date:   2018-08-01 20:43:20 -0500
 categories: class
 ---
 
-## Using GitHub
+## Using GitHub to upload your work
 ## A Short Tutorial
 ___
 
