@@ -52,23 +52,23 @@ __Staging__
 
 Along the left side of the client it will list all the files you added and changes that you made to the repository. Make sure the small box next to each change has a checkmark (everything should be checked by default).  This represents your staged changes.
 
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc5.png)
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc5.png){:height="200px"}
 
 __Committing__
 
 If everything looks good, you can commit these changes.
     Add a quick summary in the dialogue box. A summary is required to commit the changes, but a description is not.
 
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc6.png)
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc6-1.png)
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc6.png){:height="200px"}
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc6-1.png){:height="200px"}
 
 After you are done writing a short summary, click the blue 'Commit to master' button.
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc7.png)
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc7.png){:height="200px"}
 
 __Pushing__
 After you commit, the last step is to push the changes to the remote repository.  Click on the big 'Push origin' button near the top of the client or go to Repository-> Push.
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc8.png)
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc8-1.png)
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc8.png){:height="200px"}
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc8-1.png){:height="200px"}
 ___
 
 __further reading__
