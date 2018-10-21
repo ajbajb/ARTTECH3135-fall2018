@@ -61,7 +61,7 @@ You can also (and this you will most likely use), drag and drop a folder after t
 __Cloning__
 
 Open your Terminal app. `cd` to the directory in which you would like to put your git repository. To get the url for the remote repository click on the green 'Clone or download' button, then click on the clip board button inside of the drop down.
-![super]({{site.url}}/assets/images/gitClone.png)
+![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/gitClone.png)
 
 Once there, type:
 
