@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "using gitHub"
+title:  "Using gitHub"
 date:   2018-08-01 20:43:20 -0500
 categories: class
 ---
@@ -61,7 +61,7 @@ You can also (and this you will most likely use), drag and drop a folder after t
 __Cloning__
 
 Open your Terminal app. `cd` to the directory in which you would like to put your git repository. To get the url for the remote repository click on the green 'Clone or download' button, then click on the clip board button inside of the drop down.
-![super](../_assets/gitClone.png)
+![super](../../../../_assets/gitClone.png)
 
 Once there, type:
 
@@ -100,11 +100,12 @@ git commit -m "your-message"
 If, when committing, you get a terminal screen that looks like:
 
 ```
-# Please enter a commit message to explain why this merge is necessary,
-# especially if it merges an updated upstream into a topic branch.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
 #
-# Lines starting with '#' will be ignored, and an empty message aborts
-# the commit.
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
 ~             
 ~
 ~
@@ -116,7 +117,7 @@ If, when committing, you get a terminal screen that looks like:
 
 `ESCAPE`, `:`, `w`, `q`, `ENTER`
 
-This will simply allow the merge to proceed with the default message.
+This will simply abort the commit so that you can try `git commit -m` again.
 
 If you would like to switch your default text editor to something simpler, like `nano`, configure git like this:
 
