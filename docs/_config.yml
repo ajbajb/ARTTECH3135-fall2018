@@ -1,8 +1,10 @@
-title: "Interactive Art / Creative Code Fall 2018"
-name: "Interactive Art / Creative Code"
+title: Interactive Art / Creative Code Fall 2018
+name: Interactive Art / Creative Code
 description: The pretty course webpage for ARTTECH-3135 Interactive Art / Creative Code.
-baseurl: s/ARTTECH3135-fall2018 # the subpath of your site, e.g. /blog
+baseurl: /ARTTECH3135-fall2018 # the subpath of your site, e.g. /blog
 url: https://ajbajb.github.io # the base hostname & protocol for your site, e.g. http://example.com
+
+timezone: America/Chicago
 
 # Build settings
 markdown: kramdown
