@@ -7,6 +7,8 @@ categories: class
 
 ## Using GitHub to upload your work
 ## A Short Tutorial
+
+v3.
 ___
 
 First Step: Create a repository on GitHub. Make sure to initialize it with a readme.
@@ -22,9 +24,10 @@ With both options we will be executing the following steps:
 2. Stage ie. adding changes.
 3. Commit: committing the changes.
 4. Push: pushing your changes to the remote repository.
-___
 
+___
 using the Desktop Client
+
 ___
 
 If you haven't already done so, download the GitHub desktop client. From [here](https://desktop.github.com/).
