@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "Using gitHub"
-date:   2018-08-01 20:43:20 -0500
-categories: class
+layout: page
+title: using GitHub
+# permalink: /00a/
 ---
 
 ## Using GitHub to upload your work
