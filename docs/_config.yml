@@ -24,9 +24,9 @@ url: "https://ajbajb.github.io" # the base hostname & protocol for your site, e.
 markdown: kramdown
 theme: minima
 plugins:
-    - jekyll-redirect-from
-    - jekyll-sitemap
-    - jekyll-seo-tag
+    # - jekyll-redirect-from
+    # - jekyll-sitemap
+    # - jekyll-seo-tag
     - jekyll-feed
 
 # Collections
