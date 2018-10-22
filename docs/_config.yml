@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Interactive Art / Creative Code Fall 2018
-name: Interactive Art / Creative Code
+title: "Interactive Art / Creative Code Fall 2018"
+name: "Interactive Art / Creative Code"
 description: # this means to ignore newlines until "baseurl:"
-  The pretty course webpage for ARTTECH-3135 Interactive Art / Creative Code.
-baseurl: /ARTTECH3135-fall2018 # the subpath of your site, e.g. /blog
-url: "https://ajbajb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+  "The pretty course webpage for ARTTECH-3135 Interactive Art / Creative Code.""
+baseurl: "/ARTTECH3135-fall2018" # the subpath of your site, e.g. /blog
+url: "https://ajbajb.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
