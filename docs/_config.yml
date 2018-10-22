@@ -22,7 +22,7 @@ url: "https://ajbajb.github.io" # the base hostname & protocol for your site, e.
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
 plugins:
     # - jekyll-redirect-from
     # - jekyll-sitemap
