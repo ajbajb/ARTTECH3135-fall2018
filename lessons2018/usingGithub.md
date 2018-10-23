@@ -14,13 +14,13 @@ First Step: Create a repository on GitHub. Make sure to initialize it with a rea
 
 After the repository has been created, you need to clone it on to your local computer.  We will refer to the repository created on Github and that lives on Github's servers at the _remote_ repository. The _local_ repository is what lives on your computer. We will make changes to the local repository and push these changes to the remote.  You will be able to share with your friends and colleagues what is posted on the remote repository through the miracle of the _World Wide Web_. They will be impressed.
 
-I will discuss two options for for posting to and updating your GitHub repo.
+I will discuss two options for posting to and updating your GitHub repo.
 1. Using the GitHub desktop client.
 2. Using Terminal.
 
 With both options we will be executing the following steps:
-1. Clone:cloning the remote repository to your local hard drive.
-2. Stage ie. adding changes.
+1. Clone: cloning the remote repository to your local hard drive.
+2. Stage: staging changes to be committed.
 3. Commit: committing the changes.
 4. Push: pushing your changes to the remote repository.
 
@@ -43,7 +43,7 @@ Choose the repository you wish to clone, in this case I am cloning ajbajb/intera
 
 <img src="../../../blob/master/lessons2018/asset/images/dc2.png" width="50%" height="50%">
 
-Navigate to the location of the cloned repository. Add the files you wish to upload. I recommend copying files and folders into the repository. Have a look at [this](https://ajbajb.github.io/ARTTECH3135-fall2018/class/2018/10/18/class07.html) for a suggestion on how to organize the folders in the repository.
+Navigate to the location of the cloned repository. Add the files you wish to upload. I recommend copying files and folders into the repository. Have a look at [this](https://ajbajb.github.io/ARTTECH3135-fall2018/class/2018/10/17/class07.html) for a suggestion on how to organize the folders in the repository.
 
 <img src="../../../blob/master/lessons2018/asset/images/dc3.png" width="50%" height="50%">
 
@@ -136,7 +136,7 @@ Receiving objects:
 Resolving deltas:
 ```
 
-You now have a folder in that directory that is your copy of that repository.
+You now have a folder in that directory that is your local copy of that remote repository.
 
 __Staging__
 
@@ -157,8 +157,8 @@ __Committing__
 
 Once you are done adding all your changed to the staging "area" You can _commit_ your changes.
 It is required to add a message when committing.
-execute:
 
+execute:
 ```
 git commit -m "your-message"
 ```
