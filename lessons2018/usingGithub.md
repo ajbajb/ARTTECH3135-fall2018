@@ -7,7 +7,7 @@ title: using GitHub
 ## Using GitHub to upload your work
 ## A Short Tutorial
 
-v3.
+v4.
 ___
 
 First Step: Create a repository on GitHub. Make sure to initialize it with a readme.
@@ -37,7 +37,7 @@ Clone your remote repository. In this example, I am cloning my repository intera
 
 Open up the desktop client. Go to File-> Clone Repository...
 
-![super1](blob/master/lessons2018/asset/images/dc1.png)
+![super1](https://github.com/ajbajb/ARTTECH3135-fall2018/blob/master/lessons2018/asset/images/dc1.png)
 
 Choose the repository you wish to clone, in this case I am cloning ajbajb/interactive-art-code.  By default, Github will put the cloned repo in a folder called Github.  You can choose another path if you want or just hit the blue "Clone" button.  
 
