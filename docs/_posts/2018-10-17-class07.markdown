@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "Class 7: Pixels & Video Grabber"
+date:   2018-10-17 20:43:20 -0500
+categories: class
+---
+
+Hello!
+
+Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day07)
+
+and to this weeks Assignment - [Assignment 07](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/07a).
+
+A very helpful github instruction sheet is [here](https://github.com/ajbajb/ARTTECH3135-fall2018/blob/master/lessons2018/usingGithub.md) (some images aren't sizing correctly, but working on it!).
+
+Please post your completed assignments in your github repo and send me the url to your repo through slack.
+Each assignment should be in its own folder and each folder should be named something descriptive, for example "assignment01/digitalPortrait" (it doesn't need to be _exactly_ this, I need to know it is for assignment 01). Inside this folder should be all the necessary files.
+If your repo is named "interactive_code", your file structure should look like this:
+
+```
+interactive_code/
+├── assignment00_Lewitt/
+│   ├── addons.make
+│   ├── bin/
+│   ├── config.make
+│   ├── Makefile
+│   ├── openFrameworks-Info.plist
+│   ├── src/
+│   ├── etc...
+│   └── ...
+├── assignment01_digitalPortrait/
+│   ├── addons.make
+│   ├── bin/
+│   ├── config.make
+│   ├── Makefile
+│   ├── openFrameworks-Info.plist
+│   └── src/
+│   ├── etc...
+│   └── ...
+```
+
+Thanks!

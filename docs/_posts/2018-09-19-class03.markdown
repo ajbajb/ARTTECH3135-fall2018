@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Class 3: Clocks, Rotations, more Animation"
+date:   2018-09-19 20:43:20 -0500
+categories: class
+---
+
+Hello!
+
+Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day03)
+
+
+and to this weeks Assignment - [Assignment 03](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/03a)
+
+
+Thanks!

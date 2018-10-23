@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Class 4: std::vector and Attempting Classes"
+date:   2018-09-26 20:43:20 -0500
+categories: class
+---
+
+Hello!
+
+Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day04)
+
+If you are updating your local class repository and you get a message telling you to "perhaps git stash":
+run:
+```
+    git add .
+```
+then
+```
+git commit -m "_your message_"
+```
+
+
+
+
+
+and to this weeks Assignment - [Assignment 04](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/04a)
+
+
+Thanks!
