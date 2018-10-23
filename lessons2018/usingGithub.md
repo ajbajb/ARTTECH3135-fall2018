@@ -114,10 +114,27 @@ __Cloning__
 Open your Terminal app. `cd` to the directory in which you would like to put your git repository. To get the url for the remote repository click on the green 'Clone or download' button, then click on the clip board button inside of the drop down.
 
 <img src="../../../blob/master/lessons2018/asset/images/gitClone.png" width="50%" height="50%">
-Once there, type:
+Back in Terminal, type:
+
+`git clone`
+
+then paste the url you copied from the gitHub site, so that what you have typed in terminal:
 
 <pre><code>git clone <em>http-address-of-the-git-repo</em></code></pre>
-and execute.
+
+Hit Enter.
+
+Terminal should start showing a prompt saying something like:
+
+```
+Cloning into 'some repository'...
+remote: Enumerating objects:
+remote: Counting objects:
+remote: Compressing objects:
+remote: Total
+Receiving objects:
+Resolving deltas:
+```
 
 You now have a folder in that directory that is your copy of that repository.
 
