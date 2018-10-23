@@ -37,44 +37,42 @@ Clone your remote repository. In this example, I am cloning my repository intera
 
 Open up the desktop client. Go to File-> Clone Repository...
 
-![super1](https://github.com/ajbajb/ARTTECH3135-fall2018/blob/master/lessons2018/asset/images/dc1.png)
+<img src="../../../blob/master/lessons2018/asset/images/dc1.png" width="50%" height="50%">
 
 Choose the repository you wish to clone, in this case I am cloning ajbajb/interactive-art-code.  By default, Github will put the cloned repo in a folder called Github.  You can choose another path if you want or just hit the blue "Clone" button.  
 
-<!-- ![super2](../../../blob/master/lessons2018/asset/images/dc2.png) -->
 <img src="../../../blob/master/lessons2018/asset/images/dc2.png" width="50%" height="50%">
 
 Navigate to the location of the cloned repository. Add the files you wish to upload. I recommend copying files and folders into the repository. Have a look at [this](https://ajbajb.github.io/ARTTECH3135-fall2018/class/2018/10/18/class07.html) for a suggestion on how to organize the folders in the repository.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc3.png){:height="200px"} -->
 
+<img src="../../../blob/master/lessons2018/asset/images/dc3.png" width="50%" height="50%">
 After you have finished adding and making changes to the repo, go back to the Desktop client. In the top left corner of the client, the Current Repository should be your interactive-art-code repo.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc4-1.png){:height="200px"} -->
+<img src="../../../blob/master/lessons2018/asset/images/dc4-1.png" width="50%" height="50%">
 
 __Staging__
 
 Along the left side of the client it will list all the files you added and changes that you made to the repository. Make sure the small box next to each change has a checkmark (everything should be checked by default).  This represents your staged changes.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc5.png){:height="200px"} -->
+<img src="../../../blob/master/lessons2018/asset/images/dc5.png" width="50%" height="50%">
 
 __Committing__
 
 If everything looks good, you can commit these changes.
     Add a quick summary in the dialogue box. A summary is required to commit the changes, but a description is not.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc6.png){:height="200px"}
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc6-1.png){:height="200px"} -->
+<img src="../../../blob/master/lessons2018/asset/images/dc6-1.png" width="50%" height="50%">
 
 After you are done writing a short summary, click the blue 'Commit to master' button.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc7.png){:height="200px"} -->
+<img src="../../../blob/master/lessons2018/asset/images/dc7.png" width="50%" height="50%">
 
 __Pushing__
 After you commit, the last step is to push the changes to the remote repository.  Click on the big 'Push origin' button near the top of the client or go to Repository-> Push.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc8.png){:height="200px"}
-![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/dc8-1.png){:height="200px"} -->
+<img src="../../../blob/master/lessons2018/asset/images/dc8.png" width="50%" height="50%">
+<img src="../../../blob/master/lessons2018/asset/images/dc8-1.png" width="50%" height="50%">
 ___
 
 __further reading__
@@ -115,8 +113,7 @@ __Cloning__
 
 Open your Terminal app. `cd` to the directory in which you would like to put your git repository. To get the url for the remote repository click on the green 'Clone or download' button, then click on the clip board button inside of the drop down.
 
-<!-- ![super]({{site.url}}/ARTTECH3135-fall2018/assets/images/gitClone.png) -->
-
+<img src="../../../blob/master/lessons2018/asset/images/gitClone" width="50%" height="50%">
 Once there, type:
 
 <pre><code>git clone <em>http-address-of-the-git-repo</em></code></pre>
