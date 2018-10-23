@@ -41,7 +41,7 @@ Open up the desktop client. Go to File-> Clone Repository...
 
 Choose the repository you wish to clone, in this case I am cloning ajbajb/interactive-art-code.  By default, Github will put the cloned repo in a folder called Github.  You can choose another path if you want or just hit the blue "Clone" button.  
 
-![super2](/assets/images/dc2.png)
+![super2](assets/images/dc2.png)
 
 Navigate to the location of the cloned repository. Add the files you wish to upload. I recommend copying files and folders into the repository. Have a look at [this](https://ajbajb.github.io/ARTTECH3135-fall2018/class/2018/10/18/class07.html) for a suggestion on how to organize the folders in the repository.
 
