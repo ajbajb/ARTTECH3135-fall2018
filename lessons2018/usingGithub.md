@@ -45,8 +45,8 @@ Choose the repository you wish to clone, in this case I am cloning ajbajb/intera
 
 Navigate to the location of the cloned repository. Add the files you wish to upload. I recommend copying files and folders into the repository. Have a look at [this](https://ajbajb.github.io/ARTTECH3135-fall2018/class/2018/10/18/class07.html) for a suggestion on how to organize the folders in the repository.
 
-
 <img src="../../../blob/master/lessons2018/asset/images/dc3.png" width="50%" height="50%">
+
 After you have finished adding and making changes to the repo, go back to the Desktop client. In the top left corner of the client, the Current Repository should be your interactive-art-code repo.
 
 <img src="../../../blob/master/lessons2018/asset/images/dc4-1.png" width="50%" height="50%">
@@ -113,7 +113,7 @@ __Cloning__
 
 Open your Terminal app. `cd` to the directory in which you would like to put your git repository. To get the url for the remote repository click on the green 'Clone or download' button, then click on the clip board button inside of the drop down.
 
-<img src="../../../blob/master/lessons2018/asset/images/gitClone" width="50%" height="50%">
+<img src="../../../blob/master/lessons2018/asset/images/gitClone.png" width="50%" height="50%">
 Once there, type:
 
 <pre><code>git clone <em>http-address-of-the-git-repo</em></code></pre>
