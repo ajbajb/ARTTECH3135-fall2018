@@ -23,10 +23,11 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     ofVideoGrabber grabber;
+    
     ofPixels pixels;
     ofTexture texture;
     
     ofxPanel gui;
     ofParameter<float> threshold;
-    ofParameter<ofColor> selectedColor;
+    ofParameter<ofColor> selectedColor;  //make a color wheel!
 };
