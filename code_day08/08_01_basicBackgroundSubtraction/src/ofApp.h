@@ -20,8 +20,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-	
-    ofVideoPlayer player;
+    
     ofVideoGrabber grabber;
     int gw;
     int gh;
@@ -29,12 +28,17 @@ class ofApp : public ofBaseApp{
     ofPixels grayPixels;
     ofTexture grayTexture;
     
+    ofPixels backgroundPixels;
+    ofTexture backgroundTexture;
+    
+    ofPixels diffPixels;
+    ofTexture diffTexture;
+    
+    ofPixels finalPixels;
+    ofTexture finalTexture;
+    
     int threshold = 127;
 };
-
-
-
-
 
 
 

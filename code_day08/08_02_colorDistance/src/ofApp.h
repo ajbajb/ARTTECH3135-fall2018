@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,25 +21,12 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-	
-    ofVideoPlayer player;
+		
     ofVideoGrabber grabber;
-    int gw;
-    int gh;
+    ofPixels pixels;
+    ofTexture texture;
     
-    ofPixels grayPixels;
-    ofTexture grayTexture;
-    
-    int threshold = 127;
+    ofxPanel gui;
+    ofParameter<float> threshold;
+    ofParameter<ofColor> selectedColor;
 };
-
-
-
-
-
-
-
-
-
-
-

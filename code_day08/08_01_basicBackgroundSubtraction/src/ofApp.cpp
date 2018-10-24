@@ -3,46 +3,73 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    player.load("Blooming.mp4");
-    player.play();
-    
     grabber.setup(640, 480);
     gw = grabber.getWidth();
     gh = grabber.getHeight();
     
     grayPixels.allocate(gw, gh, OF_PIXELS_GRAY);
     grayTexture.allocate(gw, gh, GL_LUMINANCE);
+    
+    backgroundPixels.allocate(gw, gh, OF_PIXELS_GRAY);
+    backgroundTexture.allocate(gw, gh, GL_LUMINANCE);
+    
+    diffPixels.allocate(gw, gh, OF_PIXELS_GRAY);
+    diffTexture.allocate(gw, gh, GL_LUMINANCE);
+    
+    finalPixels.allocate(gw, gh, OF_PIXELS_GRAY);
+    finalTexture.allocate(gw, gh, GL_LUMINANCE);
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
     threshold = ofMap(ofGetMouseX(), 0, ofGetWidth(), 0, 255, true);
-    player.update();
     grabber.update();
     
     if (grabber.isFrameNew())
     {
+        // step one convert color to grayScale
         for (int x = 0; x < gw; x++)
         {
             for (int y = 0; y < gh; y++)
             {
-                // ofColor pixelColor = grabber.getPixels().getColor(x, y);
-                int brightnessValue = grabber.getPixels().getColor(x, y).getBrightness();
+                int brightness = grabber.getPixels().getColor(x, y).getBrightness();
+                grayPixels.setColor(x, y, brightness);
+            }
+        }
+        
+        // step 2 grab a background when you hit space ' '
+        if (ofGetKeyPressed(' '))
+        {
+            backgroundPixels = grayPixels;
+        }
+        
+        // step 3 compare background pix with current gray Pix
+        // to create a "foreground"
+        for (int x = 0; x < gw; x++)
+        {
+            for (int y = 0; y < gh; y++)
+            {
+                int currentBrightness = grayPixels.getColor(x, y).getBrightness();
+                int backgroundBrightness = backgroundPixels.getColor(x, y).getBrightness();
                 
-                // if brightness is above our threshold
-                if (brightnessValue > threshold)
+                int absDiff = std::abs(currentBrightness - backgroundBrightness);
+                
+                if (absDiff > threshold)
                 {
-                    // set the grabber Pix to white
-                    grayPixels.setColor(x, y, ofColor(0));
+                    diffPixels.setColor(x, y, ofColor(currentBrightness));
                 }
-                else  // else black
+                else
                 {
-                    grayPixels.setColor(x, y, ofColor(brightnessValue));
+                    diffPixels.setColor(x, y, ofColor(0));
                 }
             }
         }
+        
         grayTexture.loadData(grayPixels);
+        backgroundTexture.loadData(backgroundPixels);
+        diffTexture.loadData(diffPixels);
+        
     }
 }
 
@@ -51,40 +78,15 @@ void ofApp::draw()
 {
     ofBackground(25);
     
-    int halfw = gw/2;
-    int halfh = gh/2;
-    // draw the raw camera feed
-    // grabber.draw(0, 0, halfw, halfh);
+    int halfWidth = gw/2;
+    int halfHeight = gh/2;
+    grabber.draw(0, 0, halfWidth, halfHeight);
+    grayTexture.draw(halfWidth, 0, halfWidth, halfHeight);
+    backgroundTexture.draw(0, halfHeight, halfWidth, halfHeight);
+    diffTexture.draw(halfWidth, halfHeight, halfWidth, halfHeight);
     
-    // draw next to the thresholded texture
-    // grayTexture.draw(halfw, 0);
-    ofPixels videoPixels = player.getPixels();
-    videoPixels.resize(gw, gh);
-    for (int x = 0; x < gw; x += 20)
-    {
-        for (int y = 0; y < gh; y += 20)
-        {
-            int brightness = grayPixels.getColor(x, y).getBrightness();
-            // map brightness to rotation amount
-            int rotation = ofMap(brightness, 0, 255, 0, 180);
-            //set squares color from the original cameras color
-            ofColor originalColor = grabber.getPixels().getColor(x, y);
-            ofColor videoColor = videoPixels.getColor(x,y);
-            
-            ofPushMatrix();
-            ofTranslate(x, y);
-            ofRotateXDeg(rotation);
-            ofSetColor(videoColor);
-            ofDrawRectangle(0-10, 0-10, 20, 20);
-            ofPopMatrix();
-        }
-    }
-    player.draw(0, gh);
-    // display our threshold value
-    string threshStr = "Threshold:: " + ofToString(threshold);
+    string threshStr = "Threshold::" + ofToString(threshold);
     ofDrawBitmapStringHighlight(threshStr, 10, 10);
-    
-
 }
 
 //--------------------------------------------------------------
