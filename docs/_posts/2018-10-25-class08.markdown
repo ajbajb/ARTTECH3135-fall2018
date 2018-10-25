@@ -9,7 +9,7 @@ Hello!
 
 Code from class [here](https://github.com/ajbajb/ARTTECH3135-fall2018/tree/master/code_day08)
 
-and to this weeks Assignment - [Assignment 08](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/08a).
+and to this weeks Assignment  __Important__ _Make sure you do this!_ - [Assignment 08](https://ajbajb.github.io/ARTTECH3135-fall2018/assignments/08a).
 
 A very helpful github instruction sheet is [here](https://github.com/ajbajb/ARTTECH3135-fall2018/blob/master/lessons2018/usingGithub.md) (some images aren't sizing correctly, but working on it!).
 
