@@ -436,13 +436,18 @@ ___
 
 #### Session 09 -- Oct 31 2018
 ##### more Computer Vision
-- Face finding/tracking
+- ofSoundBuffer
+- Sound visualization
+
+- more camera
+    - current frame/ previous frame
+
+- Final Project proposal meetings
 ___
 
 #### Session 10 -- Nov 7 2018
 ##### Sound Synthesis Class
-- ofSoundBuffer
-- Sound visualization
+- Class Lab
 ___
 
 #### Session 11 -- Nov 14 2018

@@ -39,7 +39,7 @@ interactive_code/
 │   └── ...
 ```
 
-Also-- check back soon! I am going to post code that creates a _real_ working 3d mesh from background-substracted pixels. It will be up soon, sorry it is late!
+Also-- mesh examples are uploaded.
 
 AS always, get in touch if you have any questions.
 
