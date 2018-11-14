@@ -21,14 +21,14 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-        ofVideoGrabber grabber;
-        int width;
-        int height;
+    void timerCompleted();
+		
+    int interval = 2000;
+    int prevTime;
+    int currentTime;
     
-        ofPixels grayscalePix;
-        ofTexture grayscaleTex;
-        ofTexture grabberCopy;
-
-        ofImage foreground;
-        ofImage background;
+    ofImage backgroundImg;
+    ofImage popUpImg;
+    
+    ofFbo fbo;
 };

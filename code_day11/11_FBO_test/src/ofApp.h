@@ -25,6 +25,8 @@ class ofApp : public ofBaseApp{
     ofImage backgroundImg;
     ofImage foregroundImg;
     
+    ofImage brush;
+    
     ofFbo maskFbo;
     
     int width;

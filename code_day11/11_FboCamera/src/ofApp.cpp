@@ -40,6 +40,7 @@ void ofApp::update()
             for (int y = 0; y < height; y++)
             {
                 float brightness = grabber.getPixels().getColor(x, y).getBrightness();
+                float pixColor = 
                 
                 if (brightness > threshold)
                 {

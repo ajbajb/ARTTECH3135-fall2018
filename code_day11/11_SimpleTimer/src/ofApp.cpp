@@ -3,51 +3,27 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    // load two images
-    
     backgroundImg.load("squash.jpg");
-    foregroundImg.load("kandp.jpg");
+    popUpImg.load("kandp.jpg");
     
-    brush.load("gradient.png");
+    fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
     
-    width = backgroundImg.getWidth();
-    height = backgroundImg.getHeight();
-    
-    foregroundImg.resize(width, height);
-    
-    // load a greyscale mask
-    maskFbo.allocate(width, height, GL_RGBA);
-    
-    maskFbo.begin();
+    fbo.begin();
     ofClear(0, 0, 0, 0);
-    maskFbo.end();
+    fbo.end();
     
-    bBrushDown = false;
-
+    prevTime = 0;
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
-    if (bBrushDown)
+    currentTime = ofGetElapsedTimeMillis();
+    if (currentTime - prevTime > interval)
     {
-        ofSetColor(255);
-        maskFbo.begin();
-        
-        int brushSize = 100;
-        int brushX = mouseX - brushSize * 0.5;
-        int brushY = mouseY - brushSize * 0.5;
-        
-        //ofFill();
-        //ofDrawCircle(brushX, brushY, brushSize);
-        brush.draw(brushX, brushY, brushSize, brushSize);
-        
-        maskFbo.end();
+        timerCompleted();
+        prevTime = currentTime;
     }
-    
-    // apply mask to foreground image
-    foregroundImg.getTexture().setAlphaMask(maskFbo.getTexture());
-
 }
 
 //--------------------------------------------------------------
@@ -55,25 +31,35 @@ void ofApp::draw()
 {
     ofBackground(0);
     
-    // draw background image
     backgroundImg.draw(0, 0);
     
-    // draw foreground image, see image 2 through mask of 1
-    foregroundImg.draw(0, 0);
+    fbo.draw(0, 0);
+    
+    string currentStr = ofToString(currentTime);
+    string prevStr = ofToString(prevTime);
 
+    ofDrawBitmapString(currentStr, 25, 25);
+    ofDrawBitmapString(prevStr, 25, 40);
+    
+}
+//--------------------------------------
+void ofApp::timerCompleted()
+{
+    ofLog() << "Time reached!";
+    
+    int xpos = ofRandom(ofGetWidth());
+    int ypos = ofRandom(ofGetHeight());
+    
+    fbo.begin();
+    popUpImg.draw(xpos, ypos, 100, 100);
+    fbo.end();
+    
+    
+    
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key)
-{
-    if (key == ' ')
-    {
-        maskFbo.begin();
-        ofClear(0, 0, 0, 0);
-        maskFbo.end();
-        
-        ofLog() << "CLEAR!";
-    }
+void ofApp::keyPressed(int key){
 
 }
 
@@ -93,20 +79,12 @@ void ofApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button)
-{
-    bBrushDown = true;
+void ofApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button)
-{
-    bBrushDown = false;
-    
-    maskFbo.begin();
-    ofClear(0, 0, 0, 0);
-    maskFbo.end();
+void ofApp::mouseReleased(int x, int y, int button){
 
 }
 
