@@ -40,7 +40,6 @@ void ofApp::draw()
 
     ofDrawBitmapString(currentStr, 25, 25);
     ofDrawBitmapString(prevStr, 25, 40);
-    
 }
 //--------------------------------------
 void ofApp::timerCompleted()
